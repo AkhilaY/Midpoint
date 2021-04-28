@@ -431,7 +431,7 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
    *before* you execute the command::
 
      $ cd cs1302-omega
-     $ git checkout -M main
+     $ git branch -M main
      $ git remote add starter https://github.com/cs1302uga/cs1302-omega.git
      $ git pull starter main
 
