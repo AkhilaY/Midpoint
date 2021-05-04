@@ -5,10 +5,15 @@ import static java.lang.String.format;
 
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.nio.charset.Charset;
 import java.util.Optional;
+
+import javafx.util.Pair;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -42,6 +47,38 @@ public class Tools {
         URL location = new URL(url);
         InputStreamReader reader = new InputStreamReader(location.openStream());
         return JsonParser.parseReader(reader);
+    } // getJson
+
+    /**
+     * Return a {@link JsonElement} for the JSON response from some URL.
+     * @param url URL of the desired JSON
+     * @param requestMethod HTTP request method to use (e.g., {@code "GET"}, {@code "POST"}, etc.)
+     * @param headers list of HTTP headers to use
+     * @return object for the desired JSON
+     * @throws IOException if something goes wrong with either the download
+     *                     or parsing of the JSON
+     */
+    public static JsonElement getJson(
+        String url, String requestMethod, Pair<String, String>... headers) throws IOException {
+
+        URL location = new URL(url);
+        URLConnection con = location.openConnection();
+        HttpURLConnection http = null;
+
+        if (con instanceof URLConnection) {
+            http = (HttpURLConnection) con;
+        } else {
+            throw new IOException("unsupported connection type: " + con.getClass());
+        } // if
+
+        http.setRequestMethod(requestMethod);
+        for (Pair<String, String> header : headers) {
+            http.setRequestProperty(header.getKey(), header.getValue());
+        } // for
+
+        InputStreamReader reader = new InputStreamReader(http.getInputStream());
+        return JsonParser.parseReader(reader);
+
     } // getJson
 
     /**

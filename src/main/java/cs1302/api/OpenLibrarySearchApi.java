@@ -54,7 +54,7 @@ public class OpenLibrarySearchApi {
     public static Optional<JsonElement> search(String q) {
         try {
             String url = ENDPOINT + "?q=" + encode(q, UTF8);
-            return Optional.<JsonElement>ofNullable(getJson(url));
+            return Optional.<JsonElement>ofNullable(getJson(url, "GET"));
         } catch (IOException ioe) {
             return Optional.<JsonElement>empty();
         } // try
