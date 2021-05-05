@@ -58,8 +58,12 @@ public class Tools {
      * @throws IOException if something goes wrong with either the download
      *                     or parsing of the JSON
      */
+    @SafeVarargs
     public static JsonElement getJson(
         String url, String requestMethod, Pair<String, String>... headers) throws IOException {
+        //
+        // DO NOT MODIFY THE headers ARRAY! DOING SO WOULD BREAK THE @SafeVarargs GUARANTEE
+        //
 
         URL location = new URL(url);
         URLConnection con = location.openConnection();
