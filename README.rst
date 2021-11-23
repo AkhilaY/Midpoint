@@ -9,19 +9,19 @@
    :alt: Image from page 400 of "The Palm of Alpha Tau Omega" (1880)
 
 .. deadlines
-.. |deadline1| replace:: SAT 2021-05-08 (MAY 08) @ 03:30 PM EST
-.. |deadline2| replace:: SUN 2021-05-09 (MAY 09) @ 03:30 PM EST
-.. |deadline3| replace:: MON 2021-05-10 (MAY 10) @ 03:30 PM EST
+.. |deadline1| replace:: MON 2021-12-13 (DEC 13) @ 06:30 PM EST
+.. |deadline2| replace:: TUE 2021-12-14 (DEC 14) @ 06:30 PM EST
+.. |deadline3| replace:: WED 2021-12-15 (DEC 15) @ 06:30 PM EST
 
 .. deadline section links
-.. _deadline1: #deadline-option-1-sat-2021-04-08-may-08--1155-pm-est
-.. _deadline2: #deadline-option-2-sun-2021-05-09-may-09--1155-pm-est
-.. _deadline3: #deadline-option-3-mon-2021-05-10-may-10--1155-pm-est
+.. _deadline1: #deadline-option-1-mon-2021-12-13-dec-13--0630-pm-est
+.. _deadline2: #deadline-option-2-tue-2021-12-14-dec-14--0630-pm-est
+.. _deadline3: #deadline-option-3-wed-2021-12-15-dec-15--0630-pm-est
 
 .. notices (need to manually update the urls)
 .. |team_size_notice| image:: https://img.shields.io/badge/Team%20Size-1-informational
    :alt: Team Size |team_size|
-.. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Spring%202021-success
+.. |approval_notice| image:: image:: https://img.shields.io/badge/Approved%20for-Fall%202021-blue
    :alt: Approved for: |version|
 
 CSCI 1302 - |title| |version|
