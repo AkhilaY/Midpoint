@@ -21,7 +21,7 @@
 .. notices (need to manually update the urls)
 .. |team_size_notice| image:: https://img.shields.io/badge/Team%20Size-1-informational
    :alt: Team Size |team_size|
-.. |approval_notice| image:: image:: https://img.shields.io/badge/Approved%20for-Fall%202021-blue
+.. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Fall%202021-blue
    :alt: Approved for: |version|
 
 CSCI 1302 - |title| |version|
