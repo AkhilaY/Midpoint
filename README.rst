@@ -329,15 +329,15 @@ Final Project == Final Exam
 
 Final Submission Deadline
    Please take care to note the date/time for final submission deadline,
-   **Deadline 3**. In particular, the deadline time is 03:30 PM, which is earlier
+   **Deadline 3**. In particular, the deadline time is 06:30 PM, which is earlier
    in the day compared to previous projects.
 
 Amended Late Work Policy
    For both logistical and policy-related reasons, the usual late work policy
    will not apply for this project, and **no late submissions will be accepted after
-   11:59:59 PM on MON 2021-05-10 (May 10)**.
+   11:59:59 PM on WED 2021-12-15 (Dec 15)**.
    You can still submit late for partial credit, but late submissions will only be
-   accepted between **03:30:01 PM -- 11:59:59 PM on MON 2021-05-10 (May 10)**;
+   accepted between **06:30:01 PM -- 11:59:59 PM on MON 2021-12-15 (Dec 15)**;
    submissions received during that time frame will incur the standard
    penalty for one day late. Final submissions received after the acceptance
    window will not be graded.
@@ -369,7 +369,7 @@ Working on a Local Machine
 
    * **Apache Maven 3.8.1**
         https://maven.apache.org/
-   * **Java 11.0.10** (vendor: Oracle Corporation; **not OpenJDK**)
+   * **Java 11.0.12** (vendor: Oracle Corporation; **not OpenJDK**)
         https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
    * **OpenJFX 11.0.2** (note: should get handled by Maven)
          https://gluonhq.com/products/javafx/
