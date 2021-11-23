@@ -2,8 +2,8 @@
 .. project information
 .. |title| replace:: Omega
 .. |slug| replace:: **cs1302-omega**
-.. |semester| replace:: Spring 2021
-.. |version| replace:: v2021.sp
+.. |semester| replace:: Fall 2021
+.. |version| replace:: v2021.fa
 .. |team_size| replace:: 1
 .. |banner| image:: https://github.com/cs1302uga/cs1302-omega/raw/main/resources/readme-banner.png
    :alt: Image from page 400 of "The Palm of Alpha Tau Omega" (1880)
