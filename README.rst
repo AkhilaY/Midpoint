@@ -54,9 +54,9 @@ after the final date and time listed.
 =====  ===============
 Bonus  Deadline Option
 =====  ===============
-| +10  |deadline1|_
-|  +5  |deadline2|_
-|  +0  |deadline3|_
+ +10   |deadline1|_
+  +5   |deadline2|_
+  +0   |deadline3|_
 =====  ===============
 
 Academic Honesty
@@ -326,6 +326,10 @@ Final Project == Final Exam
    **the final project that described by this document will be treated as the final
    examination** since the grade and feedback that a student receives for this
    assignment is a summative evaluation of the entire term's work.
+   
+Final Project Grade Not Dropped
+   Since this Final Project is your Final Exam, the grade that you earn for your
+   final project submission does not qualify as a grade that can be dropped.
 
 Final Submission Deadline
    Please take care to note the date/time for final submission deadline,
