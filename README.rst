@@ -402,8 +402,9 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
       private repository you created on GitHib.
 
 2. Add the course instructors instructors as collaborators to your private
-   GitHub repository using the instructions provided in the |reading_github_setup|_
-   reading. Here are the usernames for the course instructors.
+   GitHub repository using the instructions provided 
+   `here <https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository>`__. 
+   The usernames for the course instructors are listed below.
 
    * |mepcotterell|_ -- Dr. Cotterell
    * |bjb211|_ -- Dr. Barnes
