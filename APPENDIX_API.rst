@@ -220,7 +220,7 @@ you might use something like the following:
 
    String endpoint = "https://api.thedogapi.com/v1";
    String method = "/breeds";
-   String url = endpoint + "?api_key=" + apiKey);
+   String url = endpoint + method + "?api_key=" + apiKey);
 
    try {
        JsonElement root = getJson(url);
