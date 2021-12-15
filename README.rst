@@ -341,7 +341,7 @@ Amended Late Work Policy
    will not apply for this project, and **no late submissions will be accepted after
    11:59:59 PM on WED 2021-12-15 (Dec 15)**.
    You can still submit late for partial credit, but late submissions will only be
-   accepted between **06:30:01 PM -- 11:59:59 PM on MON 2021-12-15 (Dec 15)**;
+   accepted between **06:30:01 PM -- 11:59:59 PM on WED 2021-12-15 (Dec 15)**;
    submissions received during that time frame will incur the standard
    penalty for one day late. Final submissions received after the acceptance
    window will not be graded.
