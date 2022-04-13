@@ -2,26 +2,26 @@
 .. project information
 .. |title| replace:: Omega
 .. |slug| replace:: **cs1302-omega**
-.. |semester| replace:: Fall 2021
-.. |version| replace:: v2021.fa
+.. |semester| replace:: Spring 2022
+.. |version| replace:: v2022.sp
 .. |team_size| replace:: 1
 .. |banner| image:: https://github.com/cs1302uga/cs1302-omega/raw/main/resources/readme-banner.png
    :alt: Image from page 400 of "The Palm of Alpha Tau Omega" (1880)
 
 .. deadlines
-.. |deadline1| replace:: MON 2021-12-13 (DEC 13) @ 06:30 PM EST
-.. |deadline2| replace:: TUE 2021-12-14 (DEC 14) @ 06:30 PM EST
-.. |deadline3| replace:: WED 2021-12-15 (DEC 15) @ 06:30 PM EST
+.. |deadline1| replace:: MON 2022-05-09 (MAY 09) @ 03:00 PM EST
+.. |deadline2| replace:: TUE 2022-05-10 (MAY 10) @ 03:00 PM EST
+.. |deadline3| replace:: WED 2022-05-11 (MAY 11) @ 03:00 PM EST
 
 .. deadline section links
-.. _deadline1: #deadline-option-1-mon-2021-12-13-dec-13--0630-pm-est
-.. _deadline2: #deadline-option-2-tue-2021-12-14-dec-14--0630-pm-est
-.. _deadline3: #deadline-option-3-wed-2021-12-15-dec-15--0630-pm-est
+.. _deadline1: #deadline-option-1-mon-2022-05-09-may-09--0300-pm-est
+.. _deadline2: #deadline-option-2-tue-2022-05-10-may-10--0300-pm-est
+.. _deadline3: #deadline-option-3-wed-2022-05-11-may-11--0300-pm-est
 
 .. notices (need to manually update the urls)
 .. |team_size_notice| image:: https://img.shields.io/badge/Team%20Size-1-informational
    :alt: Team Size |team_size|
-.. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Fall%202021-blue
+.. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Spring%202022-purple
    :alt: Approved for: |version|
 
 CSCI 1302 - |title| |version|
@@ -76,7 +76,7 @@ not be announced unless they change the meaning of some requirement.
 Project Description
 *******************
 
-Your goal is to implement, from scratch, a GUI application in Java 11 using JavaFX 11
+Your goal is to implement, from scratch, a GUI application in Java 17 using JavaFX 17
 that incorporates a preponderance of the topics introduced in this course in a way that
 demonstrates that you have met the learning outcomes related to those topics.
 
@@ -134,7 +134,11 @@ Arcade Game
    of it. The visuals and game mechanics must be easily recognizable and consistent with
    traditional implementations of the game you chose. You are required to utilize either
    keyboard event handlers or mouse event handlers that aren't related to one or
-   more buttons.
+   more buttons. Some examples of arcade games we have seen in the past include: Tetris,
+   Frogger, Snake, Asteroids, and many others. Other games such as Minesweeper, Connect 4, 
+   Checkers, and Chess would not be considered arcade games and would not be valid options
+   for a final project. If you have a game you are thinking of implementing and are unsure
+   of whether or not it is allowed, please ask!
 
    .. |arcade_game| replace:: arcade game
    .. _arcade_game: https://en.wikipedia.org/wiki/Arcade_game
@@ -327,21 +331,21 @@ Final Project == Final Exam
    examination** since the grade and feedback that a student receives for this
    assignment is a summative evaluation of the entire term's work.
    
-Final Project Grade Not Dropped
+<!--Final Project Grade Not Dropped
    Since this Final Project is your Final Exam, the grade that you earn for your
-   final project submission does not qualify as a grade that can be dropped.
+   final project submission does not qualify as a grade that can be dropped.-->
 
 Final Submission Deadline
    Please take care to note the date/time for final submission deadline,
-   **Deadline 3**. In particular, the deadline time is 06:30 PM, which is earlier
+   **Deadline 3**. In particular, the deadline time is 03:00 PM, which is earlier
    in the day compared to previous projects.
 
 Amended Late Work Policy
    For both logistical and policy-related reasons, the usual late work policy
    will not apply for this project, and **no late submissions will be accepted after
-   11:59:59 PM on WED 2021-12-15 (Dec 15)**.
+   11:59:59 PM on WED 2022-05-11 (May 11)**.
    You can still submit late for partial credit, but late submissions will only be
-   accepted between **06:30:01 PM -- 11:59:59 PM on WED 2021-12-15 (Dec 15)**;
+   accepted between **03:00:01 PM -- 11:59:59 PM on WED 2022-05-11 (May 11)**;
    submissions received during that time frame will incur the standard
    penalty for one day late. Final submissions received after the acceptance
    window will not be graded.
