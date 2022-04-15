@@ -24,7 +24,8 @@
 ..
    comment .. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Spring%202022-purple
    comment :alt: Approved for: |version|
-.. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Spring%20Not-yet-approved-red
+   
+.. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Not%20yet%20approved!-red
    :alt: Approved for: |version|
 
 CSCI 1302 - |title| |version|
