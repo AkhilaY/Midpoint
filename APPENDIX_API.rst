@@ -6,29 +6,6 @@ Appendix: Working with RESTful JSON APIs
 
 .. contents::
 
-API Tools in Starter Code
-*************************
-
-.. |api_tools| replace:: ``Tools``
-.. _api_tools: https://github.com/cs1302uga/cs1302-omega/blob/main/src/main/java/cs1302/api/Tools.java
-
-All of the RESTful JSON API examples presented in the appendix utilize the |api_tools|_
-class that's provided in the starter code. You are not required to use that class, but
-you may find that it makes some things a little easier to work with (e.g., working with
-JSON-related objects produced by Gson).
-
-:NOTE:
-   The examples utilize static imports in order to make some of the methods in the
-   |api_tools|_ class available without qualifying calls with the class name (e.g.,
-   make it possible to call ``get(~)`` instead of ``Tools.get(~)``). Here are the
-   lines for those static imports:
-
-   .. code:: java
-
-      import static cs1302.api.Tools.get;
-      import static cs1302.api.Tools.getJson;
-      import static cs1302.api.Tools.UTF8;
-
 API Example: Open Library Search API
 ************************************
 
@@ -60,10 +37,7 @@ Parameter   Example Value              Query String [1]_                 Example
 ==========  =========================  ================================  ================
 
 .. [1] Remember, the ``value`` in ``param=value`` contained in a query string needs
-   to be url-encoded. If you are using the |api_tools|_ class, then ``Tools.UTF8``
-   is provided to make calling ``URLEncoder.encode(value, Tools.UTF8)``; unlike the
-   version of ``encode`` that takes a ``String`` for the encoding, the overload that
-   takes a ``Charset`` does not throw any checked exceptions.
+   to be url-encoded by calling ``URLEncoder.encode(value, StandardCharsets.UTF_8)``.
 
 The API documentation says the JSON response should look something like this::
 
@@ -75,61 +49,15 @@ The API documentation says the JSON response should look something like this::
           {...},
           {...},
           ...
-          {...}]
+          {...}
+      ]
   }
 
-To perform a regular search (using parameter ``q``) for "the lord of the rings,"
-you might use something like the following:
-
-.. code:: java
-
-   String endpoint = "https://openlibrary.org/api/search.json";
-   String url = endpoint + "?q=" + encode("the lord of the rings", UTF8));
-
-   try {
-       JsonElement root = getJson(url);
-       int numFound = get(root, "numFound").getAsInt();
-       System.out.printf("numFound = %d\n", numFound);
-       ...
-   } catch (IOException ioe) {
-       ...
-   } // try
-
-The API documentaton says that each document in the list of ``docs`` should look
-something like this::
-
-  {
-      "cover_i": 258027,
-      "has_fulltext": true,
-      "edition_count": 120,
-      "title": "The Lord of the Rings",
-      "author_name": [
-          "J. R. R. Tolkien"
-      ],
-      "first_publish_year": 1954,
-      ...
-  }
-
-Suppose the document in the example above is at index ``2`` in the ``docs``
-array. You might access some of its members using something like the
-following (assuming the same ``root`` from the previous code example):
-
-.. code:: java
-
-   // example 1
-   boolean hasFulltext = get(root, "docs", 2, "has_fulltext").getAsBoolean();
-   String title = get(root, "docs", 2, "title").getAsString();
-
-.. code:: java
-
-   // example 2
-   JsonElement doc2 = get(root, "docs", 2);
-   boolean hasFulltext = get(doc2, "has_fulltext").getAsBoolean();
-   String title = get(doc2, "title").getAsString();
-
-The starter code also includes an example using this API in the
-|open_library_search_api|_ class. That example does little to no error
-checking.
+The starter code proved an example that uses this API in the
+|open_library_search_api|_ class -- it models the JSON-formatted
+response string using two Java classes, gets the string using an
+HTTP client, and parses the string using Gson. The example does little
+to no error checking.
 
 .. |open_library_search_api| replace:: ``OpenLibrarySearchApi``
 .. _open_library_search_api: https://github.com/cs1302uga/cs1302-omega/blob/main/src/main/java/cs1302/api/OpenLibrarySearchApi.java
@@ -213,40 +141,8 @@ particular response contains an array of objects::
     {...},
   ]
 
-To request the list of breeds using the ``/breeds`` method,
-you might use something like the following:
-
-.. code:: java
-
-   String endpoint = "https://api.thedogapi.com/v1";
-   String method = "/breeds";
-   String url = endpoint + method + "?api_key=" + apiKey);
-
-   try {
-       JsonElement root = getJson(url);
-       int numFound = get(root).getAsJsonArray().size();
-       System.out.printf("numFound = %d\n", numFound);
-       ...
-   } catch (IOException ioe) {
-       ...
-   } // try
-
-Suppose you want to access the breed object at index ``1`` in the array.
-You might access some of its members using something like the
-following (assuming the same ``root`` from the previous code example):
-
-.. code:: java
-
-   // example 1
-   String breedName = get(root, 1, "name").getAsString();
-   String breedOrigin = get(root, 1, "origin").getAsString();
-
-.. code:: java
-
-   // example 2
-   JsonElement breed1 = get(root, 1);
-   String breedName = get(breed1, "name").getAsString();
-   String breedOrigin = get(breed1, "origin").getAsString();
+To use this API, model the JSON-formatted response body string using Java classes,
+get the string using an HTTP client, then parse the string using Gson.
 
 .. #############################################################################
 
