@@ -1,15 +1,17 @@
 package cs1302.api;
 
-import static java.net.URLEncoder.encode;
-import static cs1302.api.Tools.get;
-import static cs1302.api.Tools.getJson;
-import static cs1302.api.Tools.UTF8;
-
 import java.io.IOException;
+import java.net.URI;
+import java.net.URLEncoder;
+import java.net.http.HttpClient;
+import java.net.http.HttpResponse;
+import java.net.http.HttpResponse.BodyHandlers;
+import java.net.http.HttpRequest;
+import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
-import java.nio.charset.Charset;
-import com.google.gson.JsonElement;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 /**
  * Example using Open Library Search API.
@@ -24,25 +26,51 @@ import com.google.gson.JsonElement;
  */
 public class OpenLibrarySearchApi {
 
+    /**
+     * Represents an Open Library Search API document.
+     */
+    private static class OpenLibraryDoc {
+        String type;
+        String title;
+    } // OpenLibraryDoc
+
+    /**
+     * Represents an Open Library Search API result.
+     */
+    private static class OpenLibraryResult {
+        int numFound;
+        OpenLibraryDoc[] docs;
+    } // OpenLibraryResult
+
+    /** HTTP client. */
+    public static final HttpClient HTTP_CLIENT = HttpClient.newBuilder()
+        .version(HttpClient.Version.HTTP_2)           // uses HTTP protocol version 2 where possible
+        .followRedirects(HttpClient.Redirect.NORMAL)  // always redirects, except from HTTPS to HTTP
+        .build();                                     // builds and returns a HttpClient object
+
+    /** Google {@code Gson} object for parsing JSON-formatted strings. */
+    public static Gson GSON = new GsonBuilder()
+        .setPrettyPrinting()                          // enable nice output when printing
+        .create();                                    // builds and returns a Gson object
+
     private static final String ENDPOINT = "https://openlibrary.org/search.json";
 
     public static void main(String[] args) {
-        search("the lord of the rings").ifPresent(response -> example1(response));
+        OpenLibrarySearchApi
+            .search("the lord of the rings")
+            .ifPresent(response -> example1(response));
     } // main
 
     /**
      * An example of some things you can do with a response.
-     * @param response the root element of a JSON response
+     * @param result the ope library search result
      */
-    private static void example1(JsonElement response) {
-        // use the "get" method defined later in this class for easier access
-        var numFound = get(response, "numFound").getAsInt();
-        var first_title = get(response, "docs", 0, "title").getAsString();
-        var first_chars = get(response, "docs", 0, "person").getAsJsonArray();
+    private static void example1(OpenLibraryResult result) {
         // print what we found
-        System.out.printf("numFound = %d\n", numFound);
-        System.out.printf("first title = %s\n", first_title);
-        System.out.printf("first characters = %s\n", first_chars);
+        System.out.printf("numFound = %d\n", result.numFound);
+        for (OpenLibraryDoc doc: result.docs) {
+            System.out.println(doc.title);
+        } // for
     } // example1
 
     /**
@@ -51,43 +79,41 @@ public class OpenLibrarySearchApi {
      * @param q query string
      * @return an {@code Optional} describing the root element of the response
      */
-    public static Optional<JsonElement> search(String q) {
+    public static Optional<OpenLibraryResult> search(String q) {
+        System.out.printf("Searching for: %s\n", q);
+        System.out.println("This may take some time to download...");
         try {
-            String url = ENDPOINT + "?q=" + encode(q, UTF8);
-            return Optional.<JsonElement>ofNullable(getJson(url, "GET"));
-        } catch (IOException ioe) {
-            return Optional.<JsonElement>empty();
+            String url =  String.format(
+                "%s?q=%s",
+                OpenLibrarySearchApi.ENDPOINT,
+                URLEncoder.encode(q, StandardCharsets.UTF_8));
+            String json = OpenLibrarySearchApi.fetchString(url);
+            OpenLibraryResult result = GSON.fromJson(json, OpenLibraryResult.class);
+            return Optional.<OpenLibraryResult>ofNullable(result);
+        } catch (IllegalArgumentException | IOException | InterruptedException e) {
+            return Optional.<OpenLibraryResult>empty();
         } // try
     } // search
 
     /**
-     * Return an {@code Optional} describing the root element of the JSON
-     * response for a "searchTitle" query.
-     * @param title title string
-     * @return an {@code Optional} describing the root element of the response
+     * Returns the response body string data from a URI.
+     * @param uri location of desired content
+     * @return response body string
+     * @throws IOException if an I/O error occurs when sending or receiving
+     * @throws InterruptedException if the HTTP client's {@code send} method is
+     *    interrupted
      */
-    public static Optional<JsonElement> searchTitle(String title) {
-        try {
-            String url = ENDPOINT + "?title=" + encode(title, UTF8);
-            return Optional.<JsonElement>ofNullable(getJson(url));
-        } catch (IOException ioe) {
-            return Optional.<JsonElement>empty();
-        } // try
-    } // searchTitle
-
-    /**
-     * Return an {@code Optional} describing the root element of the JSON
-     * response for a "searchAuthor" query.
-     * @param author author string
-     * @return an {@code Optional} describing the root element of the response
-     */
-    public static Optional<JsonElement> searchAuthor(String author) {
-        try {
-            String url = ENDPOINT + "?author=" + encode(author, UTF8);
-            return Optional.<JsonElement>ofNullable(getJson(url));
-        } catch (IOException ioe) {
-            return Optional.<JsonElement>empty();
-        } // try
-    } // searchAuthor
+    private static String fetchString(String uri) throws IOException, InterruptedException {
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create(uri))
+            .build();
+        HttpResponse<String> response = HTTP_CLIENT
+            .send(request, BodyHandlers.ofString());
+        final int statusCode = response.statusCode();
+        if (statusCode != 200) {
+            throw new IOException("response status code not 200:" + statusCode);
+        } // if
+        return response.body().trim();
+    } // fetchString
 
 } // OpenLibrarySearchApi
