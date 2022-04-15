@@ -380,11 +380,11 @@ Working on a Local Machine
    currently in use on Odin (at the time of this writing) is provided below for
    convenience.
 
-   * **Apache Maven 3.8.1**
+   * **Apache Maven 3.8.5**
         https://maven.apache.org/
-   * **Java 11.0.12** (vendor: Oracle Corporation; **not OpenJDK**)
-        https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
-   * **OpenJFX 11.0.2** (note: should get handled by Maven)
+   * **Java 17.0.2** (vendor: Oracle Corporation; **not OpenJDK**)
+        https://www.oracle.com/java/technologies/downloads/
+   * **OpenJFX 17.0.2** (note: should get handled by Maven)
          https://gluonhq.com/products/javafx/
 
 How to Download the Project
