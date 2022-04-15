@@ -101,8 +101,9 @@ External API Tool
 
    - Services like the |openlib_api|_, |the_cat_api|_, |the_dog_api|_, |poke_api|_, etc.
      provide **free access** to their RESTful JSON APIs -- a RESTful JSON API is one that
-     you can access with an ``InputStreamReader`` and parse with a JSON library like Gson.
-     For this project, you may only use RESTful JSON APIs and no other kinds of APIs.
+     you can access with an HTTP client (like ``java.net.http.HttpClient``)  and parse with
+     a JSON library like Gson. For this project, you may only use RESTful JSON APIs and no
+     other kinds of APIs.
 
      .. |the_dog_api| replace:: TheDogApi
      .. _the_dog_api: https://thedogapi.com/
