@@ -384,8 +384,8 @@ Working on a Local Machine
         https://maven.apache.org/
    * **Java 17.0.2** (vendor: Oracle Corporation; **not OpenJDK**)
         https://www.oracle.com/java/technologies/downloads/
-   * **OpenJFX 17.0.2** (note: should get handled by Maven)
-         https://gluonhq.com/products/javafx/
+
+   All other dependencies are handled via Maven.
 
 How to Download the Project
 ***************************
@@ -609,8 +609,8 @@ Appendix
 
 .. rubric:: **JavaFX**
 
-* `JavaFX 11 API Documentation <https://openjfx.io/javadoc/11/>`__
-* `JavaFX 11 Bookmarks <https://github.com/cs1302uga/cs1302-tutorials/blob/master/javafx/javafx-bookmarks.md>`__
+* `JavaFX 17 API Documentation <https://openjfx.io/javadoc/17/>`__
+* `CSCI 1302 JavaFX Bookmarks <https://github.com/cs1302uga/cs1302-tutorials/blob/master/javafx/javafx-bookmarks.md>`__
 * `CSCI 1302 JavaFX Tutorial <https://github.com/cs1302uga/cs1302-tutorials/blob/master/javafx/javafx.md>`__
 
 .. rubric:: **Git**
@@ -659,7 +659,7 @@ You may also find the |cs1302_gallery|_ a useful resource as well.
    .. rubric:: **Java API**
 
    If you're asking about a third-party Java API that is not included with
-   Java 11, JavaFX 11, Gson 2.8.6, or the starter code, then the answer is no.
+   Java 17, JavaFX 17.0.2, Gson 2.9.0, or the starter code, then the answer is no.
 
 2. **How do I add sound?**
 
