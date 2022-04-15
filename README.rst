@@ -21,7 +21,10 @@
 .. notices (need to manually update the urls)
 .. |team_size_notice| image:: https://img.shields.io/badge/Team%20Size-1-informational
    :alt: Team Size |team_size|
-.. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Spring%202022-purple
+..
+   comment .. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Spring%202022-purple
+   comment :alt: Approved for: |version|
+.. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Spring%20Not-yet-approved-red
    :alt: Approved for: |version|
 
 CSCI 1302 - |title| |version|
@@ -135,7 +138,7 @@ Arcade Game
    traditional implementations of the game you chose. You are required to utilize either
    keyboard event handlers or mouse event handlers that aren't related to one or
    more buttons. Some examples of arcade games we have seen in the past include: Tetris,
-   Frogger, Snake, Asteroids, and many others. Other games such as Minesweeper, Connect 4, 
+   Frogger, Snake, Asteroids, and many others. Other games such as Minesweeper, Connect 4,
    Checkers, and Chess would not be considered arcade games and would not be valid options
    for a final project. If you have a game you are thinking of implementing and are unsure
    of whether or not it is allowed, please ask!
@@ -330,7 +333,7 @@ Final Project == Final Exam
    **the final project that described by this document will be treated as the final
    examination** since the grade and feedback that a student receives for this
    assignment is a summative evaluation of the entire term's work.
-   
+
 <!--Final Project Grade Not Dropped
    Since this Final Project is your Final Exam, the grade that you earn for your
    final project submission does not qualify as a grade that can be dropped.-->
@@ -406,8 +409,8 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
       private repository you created on GitHib.
 
 2. Add the course instructors instructors as collaborators to your private
-   GitHub repository using the instructions provided 
-   `here <https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository>`__. 
+   GitHub repository using the instructions provided
+   `here <https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository>`__.
    The usernames for the course instructors are listed below.
 
    * |mepcotterell|_ -- Dr. Cotterell
