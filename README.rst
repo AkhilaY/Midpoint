@@ -54,8 +54,8 @@ after the final date and time listed.
 =====  ===============
 Bonus  Deadline Option
 =====  ===============
- +10   |deadline1|_
-  +5   |deadline2|_
+ +20   |deadline1|_
+ +10   |deadline2|_
   +0   |deadline3|_
 =====  ===============
 
