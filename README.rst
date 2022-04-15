@@ -327,6 +327,25 @@ Final Project Policies
 .. |final_pols| replace:: Final Project Policies
 .. _final_pols: https://github.com/cs1302uga/cs1302-omega#final-project-policies
 
+No use of ``JsonArray``, ``JsonElement``, ``JsonObject``, and ``JsonParser``
+   You may not use the following classes provided by Gson:
+
+   * ``com.google.gson.JsonArray``
+   * ``com.google.gson.JsonElement``
+   * ``com.google.gson.JsonObject``
+   * ``com.google.gson.JsonParser``
+
+   To parse a JSON-formatted string, use a ``Gson`` object's ``fromJson`` method to parse
+   the string directly into instances of classes that represent the data. Classes for
+   an iTunes Search response and result are provided with the starter code. Instructions
+   for parsing JSON-formatted strings using ``fromJson`` is described in the
+   `JSON reading <https://github.com/cs1302uga/cs1302-tutorials/blob/master/web/json.rst>`__.
+
+No use of the ``openStream()`` method in ``URL``
+  You may not use the ``openStream()`` method provided by the ``java.net.URL`` class.
+  If you need to access web content, then use an HTTP client as described in the
+  `HTTP reading <https://github.com/cs1302uga/cs1302-tutorials/blob/master/web/http.rst>`__.
+
 Final Project == Final Exam
    Per university policy, each student must be provided the opportunity to stand
    for a final examination as part of the completion of a full instructional term,
