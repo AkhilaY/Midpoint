@@ -24,7 +24,7 @@
 ..
    comment .. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Spring%202022-purple
    comment :alt: Approved for: |version|
-   
+
 .. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Not%20yet%20approved!-red
    :alt: Approved for: |version|
 
@@ -335,9 +335,10 @@ Final Project == Final Exam
    examination** since the grade and feedback that a student receives for this
    assignment is a summative evaluation of the entire term's work.
 
-<!--Final Project Grade Not Dropped
-   Since this Final Project is your Final Exam, the grade that you earn for your
-   final project submission does not qualify as a grade that can be dropped.-->
+.. comment
+   Final Project Grade Not Dropped
+      Since this Final Project is your Final Exam, the grade that you earn for your
+      final project submission does not qualify as a grade that can be dropped.
 
 Final Submission Deadline
    Please take care to note the date/time for final submission deadline,
