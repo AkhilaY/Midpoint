@@ -426,22 +426,7 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
       In the remaining instructions, ``REPO_SSH`` refers to the SSH URL for the
       private repository you created on GitHib.
 
-2. Add the course instructors instructors as collaborators to your private
-   GitHub repository using the instructions provided
-   `here <https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository>`__.
-   The usernames for the course instructors are listed below.
-
-   * |mepcotterell|_ -- Dr. Cotterell
-   * |bjb211|_ -- Dr. Barnes
-
-   Be sure to add **both** instructors.
-
-   :NOTE:
-      There may be a multi-day delay before one or both of the instructors accepts your
-      collaboration invite. Don't panic; the instructors will accept the invites as
-      soon as they can.
-
-3. Clone your empty private repository to your Odin account.
+2. Clone your empty private repository to your Odin account.
 
    .. code::
 
@@ -455,7 +440,7 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
       your public and private key pair on Odin and GitHub prior to following these
       instructions. Instructions for this are provided in the "|ssh_keys|_" reading.
 
-4. Setup a remote link the repository containing the starter code.
+3. Setup a remote link the repository containing the starter code.
    A sequence of commands is provided below. You should
    make every effort to understand what each command is doing
    *before* you execute the command::
@@ -469,7 +454,7 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
    directory (you should still be inside ``cs1302-omega``) now contains the
    starter code and a ``.git`` directory.
 
-5. You should think of the ``cs1302-omega`` directory on Odin as your local
+4. You should think of the ``cs1302-omega`` directory on Odin as your local
    copy of the project. As you add, stage, commit, branch, etc., those changes
    are only local to that copy of the project -- they do not automatically
    appear on the GitHub page for your repository. To send changes to GitHub,
@@ -499,7 +484,7 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
       If you have trouble getting any of this to work, then try asking
       on Piazza or see someone during office hours.
 
-6. Clean, compile, and run the starter code using the provided
+5. Clean, compile, and run the starter code using the provided
    ``compile.sh`` script::
 
      $ ./compile.sh
