@@ -1,4 +1,4 @@
-# Deadline
+# Deadline 5/9/2022
 
 Modify this file to satisfy a submission requirement related to the project
 deadline. Please keep this file organized using Markdown. If you click on
@@ -11,18 +11,23 @@ Markdown is transformed into nice looking HTML.
 > category that you chose, and the primary functions available to users
 > of the app.
 
-TODO WRITE / REPLACE
+This app is a represention of the game "pong", commonly known as an arcade game.
+It operates like a normal online ping pong game where the user plays against the computer.
+The score updates everytime the user or computer misses the ball.
 
 ## Part 2: New
 
 > What is something new and/or exciting that you learned from working
 > on this project?
 
-TODO WRITE / REPLACE
+At first, I was working with multiple classes to deal with the various components (the paddle, ball...etc.), but
+after analyzing each class, I realized that I could consolidate these classes into one. This decreased the lag I was initially
+facing by a significant amount.
 
 ## Part 3: Retrospect
 
 > If you could start the project over from scratch, what do
 > you think might do differently and why?
 
-TODO WRITE / REPLACE
+I would definitely work on planning it out a lot better. As mentioned above, I could have easily avoided writing
+multiple classes, had I planned out the logistics much better.
