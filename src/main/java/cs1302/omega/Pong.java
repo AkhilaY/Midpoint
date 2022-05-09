@@ -80,7 +80,7 @@ public class Pong extends Application {
         graphics.setFill(Color.WHITE);
         graphics.fillRect(0, 0, WIDTH, HEIGHT);
         graphics.setFill(Color.BLACK);
-        graphics.setFont(Font.font(25));
+        graphics.setFont(Font.font(20));
         if (begin) {
             ballXPos += ballXSpeed;
             ballYPos += ballYSpeed;
